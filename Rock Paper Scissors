@@ -1,0 +1,35 @@
+import random
+
+print("Welcome to Rock, Paper, Scissors!")
+print("You have three options:")
+print("1. Rock")
+print("2. Paper")
+print("3. Scissors")
+print("Try and beat the computer!\n")
+
+options = ["Rock", "Paper", "Scissors"]
+round_number = 1
+
+while True:
+    print(f"Round {round_number}")
+    player = input("Enter your choice (Rock, Paper, or Scissors): ").capitalize()
+    if player not in options:
+        print("Invalid choice. Try again.\n")
+        continue
+
+    computer = random.choice(options)
+
+    print("Player chose:", player)
+    print("Computer chose:", computer)
+
+    if player == computer:
+        print("It's a tie! Repeat the round.\n")
+        continue
+    elif (player == "Rock" and computer == "Scissors") or \
+         (player == "Paper" and computer == "Rock") or \
+         (player == "Scissors" and computer == "Paper"):
+        print("You Win!\n")
+    else:
+        print("Computer Wins!\n")
+
+    round_number += 1
