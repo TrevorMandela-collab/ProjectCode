@@ -1,0 +1,195 @@
+from tkinter import *
+
+count1 = 0
+player = "X"
+combo = 0
+
+def restart():
+    [b.config(state="active") for b in buttons]
+    [b.config(text=" ") for b in buttons]
+    [b.config(bg="white") for b in buttons]
+
+def checkwin():
+    wins = [
+        (Button1, Button2, Button3),
+        (Button4, Button5, Button6),
+        (Button7, Button8, Button9),
+        (Button1, Button4, Button7),
+        (Button2, Button5, Button8),
+        (Button3, Button6, Button9),
+        (Button1, Button5, Button9),
+        (Button3, Button5, Button7)
+    ]
+
+    for combo in wins:
+        if combo[0]["text"] == "X" and combo[1]["text"] == "X" and combo[2]["text"] == "X":
+            Label.config(text="X is the Winner")
+            [b.config(state="disabled") for b in buttons]
+            restart.place(x=175,
+                          y=500,
+                          width=150,
+                          height=70)
+            return
+        if combo[0]["text"] == "O" and combo[1]["text"] == "O" and combo[2]["text"] == "O":
+            Label.config(text="O is the Winner")
+            [b.config(state="disabled") for b in buttons]
+            restart.place(x=175,
+                          y=500,
+                          width=150,
+                          height=70)
+            return
+
+        if all(b["state"] == "disabled" for b in buttons):
+            Label.config(text="It's a Draw!")
+            restart.place(x=175,
+                          y=500,
+                          width=150,
+                          height=70)
+
+
+def click1():
+    global count1, player
+    count1 += 1
+
+    if player == "X":
+        Label.config(text=str(player) + " is playing")
+        player = "O"
+    else:
+        Label.config(text=str(player) + " is playing")
+        player = "X"
+
+def disable(btn):
+    global player
+    btn.config(state="disabled")
+    btn.config(bg="gray")
+    btn.config(text=player)
+
+def both(btn):
+    click1()
+    disable(btn)
+    checkwin()
+
+window = Tk()
+window.geometry("500x650")
+window.config(background="black")
+
+Label = Label(window,
+              text=str(player) + " is playing",
+              font=("Arial", 20),
+              fg="black",
+              bg="white",
+              relief="raised",
+              bd=10,
+              padx=10,
+              pady=10,
+              compound="left")
+
+Label.pack()
+
+Button1 = Button(window,text=" ",
+                 command=lambda:both(Button1),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button1.place(x=50,
+              y=80,
+              width=120,
+              height=120)
+
+Button2 = Button(window,text=" ",
+                 command=lambda:both(Button2),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button2.place(x=190,
+              y=80,
+              width=120,
+              height=120)
+
+Button3 = Button(window,text=" ",
+                 command=lambda:both(Button3),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button3.place(x=330,
+              y=80,
+              width=120,
+              height=120)
+
+Button4 = Button(window,text=" "
+                 ,command=lambda:both(Button4),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button4.place(x=50,
+              y=220,
+              width=120,
+              height=120)
+
+Button5 = Button(window,text=" ",
+                 command=lambda:both(Button5),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button5.place(x=190,
+              y=220,
+              width=120,
+              height=120)
+
+Button6 = Button(window,text=" ",
+                 command=lambda:both(Button6),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button6.place(x=330,
+              y=220,
+              width=120,
+              height=120)
+
+Button7 = Button(window,text=" ",
+                 command=lambda:both(Button7),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button7.place(x=50,
+              y=360,
+              width=120,
+              height=120)
+
+Button8 = Button(window,text=" ",
+                 command=lambda:both(Button8),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button8.place(x=190,
+              y=360,
+              width=120,
+              height=120)
+
+Button9 = Button(window,
+                 text=" ",
+                 command=lambda:both(Button9),
+                 font=("Arial",50),
+                 fg="red",
+                 bg="white")
+Button9.place(x=330,
+              y=360,
+              width=120,
+              height=120)
+
+restart = Button(window,text="restart",
+                 command=restart,
+                 font=("Arial",30),
+                 fg="gray",
+                 bg="white")
+restart.place(x=175,
+              y=500,
+              width=150,
+              height=70)
+
+buttons = [Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9]
+
+restart.place_forget()
+
+window.mainloop()
+
