@@ -1,0 +1,70 @@
+score = 0
+loses = 0
+
+print("Welcome to Name the Object from Description!\n")
+
+# 5 levels with 5 questions each
+levels = {
+    "Easy": [
+        ("A sweet, crunchy fruit that comes in red, green or yellow: ", "apple"),
+        ("You sit on it at a table or desk: ", "chair"),
+        ("Filled with pages of words or pictures: ", "book"),
+        ("You use it to write on paper: ", "pen"),
+        ("Protects your feet while you walk: ", "shoes")
+    ],
+    "Medium": [
+        ("Tells you the time: ", "clock"),
+        ("Lets you call, text, or scroll social media: ", "phone"),
+        ("Holds your drink, often coffee or tea: ", "cup"),
+        ("Where you sleep at night: ", "bed"),
+        ("A flat surface to place things on: ", "table")
+    ],
+    "Intermediate": [
+        ("Helps you see better if your vision isn’t perfect: ", "glasses"),
+        ("Cuts paper, cloth, or hair: ", "scissors"),
+        ("Dries you after a shower or swim: ", "towel"),
+        ("Provides light without electricity: ", "candle"),
+        ("Carried on your back, holds school supplies: ", "backpack")
+    ],
+    "Hard": [
+        ("Ancient tool for calculations: ", "abacus"),
+        ("Lets you view stars and planets: ", "telescope"),
+        ("Old-fashioned writing tool with ink: ", "quill"),
+        ("Shows shifting colorful patterns: ", "kaleidoscope"),
+        ("Crushes herbs or spices: ", "mortar and pestle")
+    ],
+    "Impossible": [
+        ("Maintains orientation using spinning discs: ", "gyroscope"),
+        ("Spins samples to separate substances: ", "centrifuge"),
+        ("Lets you see over obstacles: ", "periscope"),
+        ("Old calculating device: ", "slide rule"),
+        ("Measures properties of light: ", "spectrometer")
+    ]
+}
+
+# Loop through all levels
+level_number = 1
+for level_name, questions in levels.items():
+    print(f"\n--- LEVEL {level_number}: {level_name} ---")
+    wins = 0
+    level_loses = 0
+
+    for question, answer in questions:
+        user_answer = input(question)
+        if user_answer.lower() == answer:
+            wins += 1
+            score += 1
+        else:
+            level_loses += 1
+            loses += 1
+
+    print(f"\nLevel {level_number} complete!")
+    print(f"Correct answers: {wins}")
+    print(f"Wrong answers: {level_loses}")
+    print(f"Total score so far: {score}\n")
+
+    level_number += 1
+
+print("🎉 GAME COMPLETE! 🎉")
+print(f"Final score: {score}")
+print(f"Total wrong attempts: {loses}")
