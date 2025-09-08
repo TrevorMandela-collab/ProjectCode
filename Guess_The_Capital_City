@@ -1,0 +1,242 @@
+print("Welcome to Guess the Capital Cities")
+print("Try and Guess 100 Capital Cities of the World")
+print("Ready in\n3\n2\n1\nStart!\n")
+
+score = 0
+W = 0
+L = 0
+
+print(["Rosario", "Cordoba", "Buenos Aires"])
+Answer = input("Capital City of ARGENTINA: ").strip()
+
+if Answer.lower() == "Buenos Aires".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Cairo", "Alexandria", "Giza"])
+Answer = input("Capital City of EGYPT: ",).strip()
+
+if Answer.lower() == "Cairo".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["London", "Manchester", "Birmingham"])
+Answer = input("Capital City of UNITED KINDOM: ",).strip()
+
+if Answer.lower() == "London".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Mexico City", "Guadalajara", "Monterrey"])
+Answer = input("Capital City of MEXICO: ",).strip()
+
+if Answer.lower() == "Mexico City".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Bangalore", "Mumbai", "New Delhi"])
+Answer = input("Capital City of INDIA: ",).strip()
+
+if Answer.lower() == "New Delhi".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Ho Chi Minh City", "Hanoi", "Da Nang"])
+Answer = input("Capital City of VIETNAM: ",).strip()
+
+if Answer.lower() == "Hanio".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Seoul", "Busan", "Incheon"])
+Answer = input("Capital City of SOUTH KOREA: ",).strip()
+
+if Answer.lower() == "Seoul".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Valencia", "Barcelona", "Madrid"])
+Answer = input("Capital City of SPAIN: ",).strip()
+
+if Answer.lower() == "Madrid".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+    L += 1
+
+print(["Nicosia", "Limassol", "Larnaco"])
+Answer = input("Capital City of CYPRUS: ",).strip()
+
+if Answer.lower() == "Nicosia".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Vientiane", "Luang Prabang", "Pakse"])
+Answer = input("Capital City of LAOS: ",).strip()
+
+if Answer.lower() == "Vientiane".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Mosul", "Baghdad", "Basra"])
+Answer = input("Capital City of IRAQ: ",).strip()
+
+if Answer.lower() == "Baghdad".lower():
+     print("Correct\n")
+     score += 1
+     W += 1
+else:
+     print("Incorrect\n")
+     L += 1
+
+print(["Innsbruck", "Salzurg", "Vienna"])
+Answer = input("Capital City of AUSTRIA: ",).strip()
+
+if Answer.lower() == "Vienna".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Ostrava", "Bucharest", "Prague"])
+Answer = input("Capital City of CZECH REPUBLIC: ",).strip()
+
+if Answer.lower() == "Prague".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Tehran", "Nicosia", "Damascus"])
+Answer = input("Capital City of SYRIA: ",).strip()
+
+if Answer.lower() == "Damascus".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Kabul", "Dakar", "Luanda"])
+Answer = input("Capital City of AFGHANISTAN: ",).strip()
+
+if Answer.lower() == "Kabul". lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Ankara", "Istanbul", "Izmir"])
+Answer = input("Capital City of TURKEY: ",).strip()
+
+if Answer.lower() == "Ankara".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Oslo", "Bergen", "Trondheim"])
+Answer = input("Capital City of NORWAY: ",).strip()
+
+if Answer.lower() == "Oslo".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Mombasa", "Nairobi", "Kisumu"])
+Answer = input("Capital City of KENYA: ",).strip()
+
+if Answer.lower() == "Nairobi".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Mwanza", "Dar es Salaam", "Dodoma"])
+Answer = input("Capital City of TANZANIA: ",).strip()
+
+if Answer.lower() == "Dodoma".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Khartoum", "Omdurman", "Tripoli"])
+Answer = input("Capital City of SUDAN: ",).strip()
+
+if Answer.lower() == "Khartoum".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print(["Salalah", "Muscat", "Sohar"])
+Answer = input("Capital City of OMAN: ",).strip()
+if Answer.lower() == "Muscat".lower():
+    print("Correct\n")
+    score += 1
+    W += 1
+else:
+    print("Incorrect\n")
+L += 1
+
+print("Weldone you passed the test with: ")
+print(score)
+print("Wins: " + str(W))
+print("Loses: " + str(L))
